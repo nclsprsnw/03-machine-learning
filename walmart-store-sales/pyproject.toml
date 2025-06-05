@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "walmart_store_sales"
+version = "0.0.1"
+description = "Predict Walmart weekly sales using a regression model. Focus on EDA, preprocessing, and training linear and regularized regression models to understand economic influences and avoid overfitting."
+authors = [
+  { name = "nclsprsnw" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["walmart_store_sales"]
+include = ["pyproject.toml", "walmart_store_sales/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["walmart_store_sales"]
+force-sort-within-sections = true
+
