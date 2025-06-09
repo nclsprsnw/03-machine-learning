@@ -1,5 +1,8 @@
 # Data
 /data/
+!/data/processed/conversion_data_train_EDA_output.csv
+!/data/raw/conversion_data_test.csv
+!/data/raw/conversion_data_train.csv
 
 # Mac OS-specific storage files
 .DS_Store
