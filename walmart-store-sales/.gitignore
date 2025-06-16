@@ -1,5 +1,8 @@
-# Data
-/data/
+# Ignore everything in the 'data/' directory by default
+data/*
+!data/raw/
+data/raw/*
+!data/raw/Walmart_Store_sales.csv
 
 # Mac OS-specific storage files
 .DS_Store
