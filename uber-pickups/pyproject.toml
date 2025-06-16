@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "uber_pickups"
+version = "0.0.1"
+description = "This project focuses on optimizing Uber's driver-user matching in New York City by predicting \"hot zones\" where demand for rides is high. The goal is to reduce user wait times, which currently lead to cancellations when exceeding 5-7 minutes. Using historical Uber trip data for NYC, the task involves developing algorithms (ideally clustering techniques like KMeans and DBScan) to identify these hot zones, initially for specific hours and days, and then generalizing. The final deliverable will be an interactive map visualization of these hot zones, comparing the results of at least two unsupervised learning algorithms."
+authors = [
+  { name = "nclsprsnw" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["uber_pickups"]
+include = ["pyproject.toml", "uber_pickups/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["uber_pickups"]
+force-sort-within-sections = true
+
