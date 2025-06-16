@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "the_north_face_ecommerce"
+version = "0.0.1"
+description = "For The North Face, this project leverages machine learning on product descriptions to boost online sales. It involves clustering products for a recommender system and using topic modeling to refine the product catalog, ultimately enhancing user experience and conversion rates."
+authors = [
+  { name = "nclsprsnw" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["the_north_face_ecommerce"]
+include = ["pyproject.toml", "the_north_face_ecommerce/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["the_north_face_ecommerce"]
+force-sort-within-sections = true
+
